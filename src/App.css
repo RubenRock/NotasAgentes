@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+p{
+  margin: 0px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -38,4 +42,32 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.listaRemision{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  text-align: left;  
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.Remisiones{
+  margin-top: 15px;
+  font-size: 11px;
+  line-height: 11px;
+}
+
+.listaRemision_item{
+  background: purple;
+  border-radius: 15px;
+  width: 220px;
+  padding: 10px;
+}
+
+.fila{
+  display: flex;
+  flex-direction: row;
 }
