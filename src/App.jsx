@@ -21,6 +21,13 @@ function App() {
   },[])
 
   const Mostrar_listaRemision = () =>
+  <>
+    <h1>estado de las notas: </h1>
+    {comprobar_estado() ?  
+      <h1 style={{color : 'green'}}> correcto </h1>
+    :
+      <h1 style={{color : 'red'}}> con error </h1>
+    }
     <div className='listaRemision'>    
       {listaRemision.map(item =>        
         <div className='listaRemision_item' key={item.folio}>
@@ -32,6 +39,7 @@ function App() {
         </div>
       )}
     </div>
+  </>
 
   const filtrar_remisiones = (folio) =>{    
     let remisionFiltrada = remisiones.filter(item => item.folio == folio);
@@ -78,15 +86,9 @@ function App() {
       {cargando ?           
           <h1>Cargando...</h1>       
       :
-        <>
-          <h1>estado de las notas: </h1>
-          {comprobar_estado() ?  
-            <h1 style={{color : 'green'}}> correcto </h1>
-          :
-            <h1 style={{color : 'red'}}> con error </h1>
-          }
+        <>          
           <Mostrar_listaRemision/>
-      </>
+        </>
       }      
       
     </div>
