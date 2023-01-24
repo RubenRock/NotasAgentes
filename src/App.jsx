@@ -32,6 +32,7 @@ function App() {
       {listaRemision.map(item =>        
         <div className='listaRemision_item' key={item.folio}>
           <p>folio: {item.folio}</p>            
+          <p>fecha: {item.fecha}</p> 
           <p>cliente: {item.cliente}</p> 
           <p>domicilio: {item.domicilio}</p> 
           <p>total: {item.total}</p>
