@@ -36,6 +36,11 @@ function App() {
           <p>cliente: {item.cliente}</p> 
           <p>domicilio: {item.domicilio}</p> 
           <p>total: {item.total}</p>
+
+          {
+            item.informacion &&
+            <p className='bordeInformacion'>info adicional: {item.informacion}</p>
+          }
           <Mostrar_remisiones folio={item.folio} total={item.total}/>          
         </div>
       )}
